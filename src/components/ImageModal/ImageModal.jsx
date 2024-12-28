@@ -18,7 +18,11 @@ const ImageModal = ({ isOpen, image, onClose }) => {
   }, [isOpen]);
 
   return (
-    <Modal isOpen={isOpen} onRequestClose={onClose}>
+    <Modal
+      isOpen={isOpen}
+      onRequestClose={onClose}
+      appElement={document.getElementById("root")}
+    >
       <div className={styles.modalWrap}>
         <img
           src={image.urls.regular}
